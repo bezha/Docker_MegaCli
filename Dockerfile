@@ -38,7 +38,7 @@ RUN     yum -y install \
 
 
 COPY resources/scripts /megacli \
-&& resources/scripts2 /megacli/scripts
+COPY resources/scripts2 /megacli/scripts
 WORKDIR "/megacli"
 RUN chmod a+x *.sh *.pl \
 && chmod a+x * /megacli/scripts
