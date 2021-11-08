@@ -17,7 +17,6 @@ RUN     yum -y install \
     && rm -rf /var/cache/yum \
     && mkdir -p /megacli \
     && curl -sSL -o /tmp/megacli.rpm https://srkdev.com/megacli/MegaCli-8.07.14-1.noarch.rpm \
-    && curl -sSL -o /tmp/storcli.rpm https://srkdev.com/megacli/storcli-1.03.11-1.noarch.rpm \
     && rpm -ivh /tmp/*.rpm \
     && rm /tmp/*.rpm \
     && ln -sf /opt/MegaRAID/MegaCli/MegaCli64 /usr/bin/MegaCli \
@@ -38,8 +37,8 @@ RUN     yum -y install \
     && echo '/megacli/check_ipmi_sensor.pl -T 'Power_Supply'' >> ~/.bashrc
 
 
-COPY resources/scripts /megacli
-COPY resources/scripts2 /megacli/scripts
+COPY resources/scripts /megacli \
+&& resources/scripts2 /megacli/scripts
 WORKDIR "/megacli"
 RUN chmod a+x *.sh *.pl \
 && chmod a+x * /megacli/scripts
