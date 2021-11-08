@@ -37,7 +37,7 @@ RUN     yum -y install \
     && echo '/megacli/check_ipmi_sensor.pl -T 'Power_Supply'' >> ~/.bashrc
 
 
-COPY resources/scripts /megacli \
+COPY resources/scripts /megacli
 COPY resources/scripts2 /megacli/scripts
 WORKDIR "/megacli"
 RUN chmod a+x *.sh *.pl \
