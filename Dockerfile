@@ -43,4 +43,4 @@ WORKDIR "/megacli"
 RUN chmod a+x *.sh *.pl \
 && chmod -R a+x /megacli/scripts
 
-CMD ["bash", "-l"]git status
+CMD ["bash", "-l"]
