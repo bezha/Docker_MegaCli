@@ -41,7 +41,7 @@ RUN     yum -y install \
 COPY resources/scripts /megacli
 COPY resources/scripts2 /megacli/scripts
 WORKDIR "/megacli"
-RUN chmod a+x *.sh *.pl
-RUN chmod a+x * /megacli/scripts
+RUN chmod a+x *.sh *.pl \
+&& chmod a+x * /megacli/scripts
 
 CMD ["bash", "-l"]git status
