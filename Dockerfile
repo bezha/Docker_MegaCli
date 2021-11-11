@@ -30,7 +30,7 @@ RUN     yum -y install \
     && echo 'MegaCli -PDList -aALL | awk -f /megacli/aw.awk' >> ~/.bashrc \
     && echo 'echo -----------------------------------------------------------------------' >> ~/.bashrc \
     && echo 'echo S.M.A.R.T status:' >> ~/.bashrc \
-    && echo 'MegaCli -ShowSummary -a0 | grep Slot | awk '{print $8}' | while read LINE; do /megacli/check_smart.pl -d /dev/sda -i megaraid,$LINE done' >> ~/.bashrc \
+    && echo '/megacli/smart_drives.sh' >> ~/.bashrc \
     && echo 'echo -----------------------------------------------------------------------' >> ~/.bashrc \
     && echo 'echo Power Status:' >> ~/.bashrc \
     && echo '/megacli/check_ipmi_sensor.pl -T 'Power_Supply'' >> ~/.bashrc
