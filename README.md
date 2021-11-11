@@ -15,3 +15,5 @@ You can run this container without installing anything except Docker:
 
 > Note that the `--rm` will delete the container for you when you exit it, and
 > `privileged` mode is required so the container can talk directly to the hardware.
+
+![Docker_MegaCli](https://user-images.githubusercontent.com/426963/141358616-86d4a408-b1ee-4c0e-988c-b25b25fbea11.png)
