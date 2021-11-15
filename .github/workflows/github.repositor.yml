@@ -24,4 +24,4 @@ jobs:
         with:
           push: true # Will only build if this is not here
           tags: |
-            ghcr.io/${{ github.repository }}:v1
+            ghcr.io/docker_megacli:v1
