@@ -33,7 +33,8 @@ RUN     yum -y install \
     && echo '/megacli/smart_drives.sh' >> ~/.bashrc \
     && echo 'echo -----------------------------------------------------------------------' >> ~/.bashrc \
     && echo 'echo Power Status:' >> ~/.bashrc \
-    && echo '/megacli/check_ipmi_sensor.pl -T 'Power_Supply'' >> ~/.bashrc
+    && echo '/usr/sbin/ipmi-sel --clear' >> ~/.bashrc \
+    && echo '/megacli/check_ipmi_sensor.pl -T 'Power_Supply' --vv' >> ~/.bashrc
 
 
 COPY resources/scripts /megacli
